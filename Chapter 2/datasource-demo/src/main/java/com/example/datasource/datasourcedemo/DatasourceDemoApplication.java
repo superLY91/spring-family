@@ -29,7 +29,7 @@ public class DatasourceDemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		showConnection();
-//		showData();
+		showData();
 	}
 
 	private void showConnection() throws SQLException {
