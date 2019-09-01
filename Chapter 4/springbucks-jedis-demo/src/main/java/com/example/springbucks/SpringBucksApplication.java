@@ -44,7 +44,7 @@ public class SpringBucksApplication implements ApplicationRunner {
 
 	@Bean(destroyMethod = "close")
 	public JedisPool jedisPool(@Value("${redis.host}") String host) {
-		return new JedisPool(jedisPoolConfig, host);
+		return new JedisPool(jedisPoolConfig(), host);
 	}
 
 	@Override
