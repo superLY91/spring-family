@@ -22,12 +22,12 @@ public class WaiterServiceApplication implements WebMvcConfigurer {
 		SpringApplication.run(WaiterServiceApplication.class, args);
 	}
 
-//	@Override
-//	public void addInterceptors(InterceptorRegistry registry) {
-//		registry.addInterceptor(new PerformanceInteceptor())
-//				.addPathPatterns("/coffee/**")
-//				.addPathPatterns("/order/**");
-//	}
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(new PerformanceInteceptor())
+				.addPathPatterns("/coffee/**")
+				.addPathPatterns("/order/**");
+	}
 
 	@Bean
 	public Hibernate5Module hibernate5Module() {
