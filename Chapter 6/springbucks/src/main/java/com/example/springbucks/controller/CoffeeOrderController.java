@@ -22,7 +22,9 @@ public class CoffeeOrderController {
 
     @GetMapping("/{id}")
     public CoffeeOrder getOrder(@PathVariable("id") Long id) {
-        return orderService.get(id);
+        CoffeeOrder order = orderService.get(id);
+        log.info("Order: {}", order);
+        return order;
     }
 
     @PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE,
